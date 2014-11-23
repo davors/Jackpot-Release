@@ -1,5 +1,4 @@
 from GlobalDefines import *
-from Config_testCases import *
 
 
 #default settings (for possible options see GlobalDefines.py)
