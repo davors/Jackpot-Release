@@ -22,7 +22,7 @@ def detectChangePoint(solver, machine_id):
         # self.config.params[1].lastInputs[0] = some_new_input1
         # self.config.params[1].lastInputs10] = some_new_input2
         # self.config.params[2].lastInputs[0] = some_new_input3
-    if solver.config.changePointDetector == GLODEF_CHANGEPOINT_DAVORTOM :
+    if solver.config.changePointDetector == GLODEF_CHANGEPOINT_Z_TEST :
             rejected_pulls = checkChange(solver,machine_id)
     elif solver.config.changePointDetector == GLODEF_CHANGEPOINT_HENKYPENKY :
             rejected_pulls=HankeyPankeyTest(solver,machine_id)
