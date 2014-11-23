@@ -28,14 +28,14 @@ if case<1:
 
 
 #settings
-
-solv_initial_param_values = [1.0, 0.77, [0,1], 43, 50]     #if None: default will be used
+linUCBTweights = [1  ,-0.1,-0.4,0.8,-0.1,-0.3]
+solv_initial_param_values = [linUCBTweights[0:3], linUCBTweights[3:6], [0,1], 43, 1.0]
 solv_selection_policy = GLODEF_SELECTION_VOTER
 solv_change_point_detector = GLODEF_CHANGEPOINT_HENKYPENKY
 solv_change_point_test = DEFAULT_CHANGEPOINT_TEST
 solv_reset_algorithm = GLODEF_RESET_ALGORITHM_RESET_ALL_TO_ZERO
-solv_param_types = [GLODEF_PARAM_FUNCTION_DIRECT , GLODEF_PARAM_FUNCTION_DIRECT, GLODEF_PARAM_FUNCTION_LINEAR, GLODEF_PARAM_FUNCTION_DIRECT, GLODEF_PARAM_FUNCTION_DIRECT]
-solv_param_num_inputs = [0, 0, 1, 0, 0]
+solv_param_types = [GLODEF_PARAM_FUNCTION_LINEAR , GLODEF_PARAM_FUNCTION_LINEAR, GLODEF_PARAM_FUNCTION_LINEAR, GLODEF_PARAM_FUNCTION_DIRECT, GLODEF_PARAM_FUNCTION_DIRECT]
+solv_param_num_inputs = [2, 2, 1, 0, 0]
 
 #connect to server
 print "Fetching case "+str(case)+" data..."
